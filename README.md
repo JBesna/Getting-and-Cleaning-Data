@@ -4,7 +4,7 @@ The run_analysis.r program will work if you dowloand the folder:
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 and set the working directory to the unzipped folder.
 
-The program uses the dplyr package. It takes accelorameter data
+The program uses the dplyr and reshape2 packages. It takes accelorameter data
 from cell phones for 30 users (subject_number in the final data) across six 
 different activities (activity_name in the final data)
 
@@ -46,8 +46,9 @@ allowable values: 1:30
 type: integer
 note: each subject performed all activities in the study
 
-fields 3-77: average of various statistics in the study
-description: each field is the average value of either a mean or standard
+fields 3-81: average of various statistics in the study
+description: each field is the average value of either a mean or standard. These are all the fields
+that contained either mean() or std() in the train/test data.
 deviation in the data set. See names(final_data) for a list of the field names
 allowable values: [-1,1]
 type: continuous number
