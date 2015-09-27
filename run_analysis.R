@@ -41,9 +41,9 @@ features <- rename(features,feature_number=V1,feature_name=V2)
         # add training data
         train_data2 <- merge(train_details,train_data,by="key")
         # only keep variable names that contain "mean"
-        train_data_mean <- train_data2[, grep("*mean*", colnames(train_data))]
+        train_data_mean <- train_data2[, grep("*mean*", colnames(train_data2))]
         # only keep variable names that contain "std"
-        train_data_std <- train_data2[, grep("*std*", colnames(train_data))]
+        train_data_std <- train_data2[, grep("*std*", colnames(train_data2))]
         # combine train datasets with mean and std into one dataset
         train_data3 <- cbind(train_data_mean,train_data_std)
 
@@ -73,9 +73,9 @@ features <- rename(features,feature_number=V1,feature_name=V2)
         # add testing data
         test_data2 <- merge(test_details,test_data,by="key")
         # only keep variable names that contain "mean"
-        test_data_mean <- test_data2[, grep("*mean*", colnames(test_data))]
+        test_data_mean <- test_data2[, grep("*mean*", colnames(test_data2))]
         # only keep variable names that contain "std"
-        test_data_std <- test_data2[, grep("*std*", colnames(test_data))]
+        test_data_std <- test_data2[, grep("*std*", colnames(test_data2))]
         # combine test datasets with mean and std into one dataset
         test_data3 <- cbind(test_data_mean,test_data_std)
         
