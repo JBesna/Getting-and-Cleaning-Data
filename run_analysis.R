@@ -4,6 +4,7 @@
 #install packages and load libraries
 install.packages("dplyr")
 library(dplyr)
+library(reshape2)
 
 # read activity labels
 activity_labels <- read.table("activity_labels.txt")
@@ -45,7 +46,7 @@ features <- rename(features,feature_number=V1,feature_name=V2)
         # only keep variable names that contain "std"
         train_data_std <- train_data2[, grep("*std*", colnames(train_data2))]
         # combine train datasets with mean and std into one dataset
-        train_data3 <- cbind(train_data_mean,train_data_std)
+        train_data3 <- cbind(train_details,train_data_mean,train_data_std)
 
 # read test data
         # read testing subjects
@@ -77,7 +78,7 @@ features <- rename(features,feature_number=V1,feature_name=V2)
         # only keep variable names that contain "std"
         test_data_std <- test_data2[, grep("*std*", colnames(test_data2))]
         # combine test datasets with mean and std into one dataset
-        test_data3 <- cbind(test_data_mean,test_data_std)
+        test_data3 <- cbind(test_details,test_data_mean,test_data_std)
         
 # combine train and test data 
 combined_data <- rbind(train_data3,test_data3)
