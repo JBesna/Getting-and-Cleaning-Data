@@ -47,7 +47,7 @@ features <- rename(features,feature_number=V1,feature_name=V2)
         # combine train datasets with mean and std into one dataset
         train_data3 <- cbind(train_data_mean,train_data_std)
 
-        # read test data
+# read test data
         # read testing subjects
         test_subjects <- read.table("./test/subject_test.txt")
         # rename variables
