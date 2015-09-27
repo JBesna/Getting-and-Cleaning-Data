@@ -1,6 +1,6 @@
 # Getting-and-Cleaning-Data
 
-The run_analysis.r program will work if you dowloand the folder:
+The run_analysis.r program will work if you dowload the folder:
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 and set the working directory to the unzipped folder.
 
