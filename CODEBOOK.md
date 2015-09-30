@@ -1,3 +1,5 @@
+Note: I originally had the CODE BOOK as part of the README file. Moved to a separate file to avoid confusion.
+
 CODE BOOK: field 1: activity_name description: one of six activities that were studied 
 allowable values: LAYING, SITTING, STANDING, WALKING, WALKING_DOWNSTAIRS, WALKING_UPSTAIRS 
 type: factor with 6 levels 
